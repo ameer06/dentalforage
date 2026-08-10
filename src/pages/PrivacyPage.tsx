@@ -1,6 +1,12 @@
 import { SITE_CONFIG } from '../data/config';
+import { useSEO } from '../hooks/useSEO';
 
 export default function PrivacyPage() {
+  useSEO({
+    title: 'Privacy Policy',
+    description: 'Privacy Policy describing how Dental Forge Technologies LLP collects, uses, and protects your personal information when you use our website and services.',
+  });
+
   const sections = [
     {
       title: 'Information We Collect',

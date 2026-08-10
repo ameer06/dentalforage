@@ -5,6 +5,7 @@ import ProductCard from '../components/ui/ProductCard';
 import CTASection from '../components/sections/CTASection';
 import SectionLabel from '../components/ui/SectionLabel';
 import { PRODUCTS } from '../data/products';
+import { useSEO } from '../hooks/useSEO';
 
 const WHY_FEATURES = [
   {
@@ -55,6 +56,11 @@ const TRUST_ITEMS = [
 const featuredProducts = PRODUCTS.filter((p) => p.featured);
 
 export default function HomePage() {
+  useSEO({
+    title: 'Precision Digital Dental Laboratory',
+    description: 'A digital-first CAD/CAM dental laboratory providing precision milled restorations, clear aligners, and digital workflows for dentists and clinics across India.',
+  });
+
   return (
     <>
       {/* SEO meta via title tag — actual meta managed in App.tsx / helmet */}

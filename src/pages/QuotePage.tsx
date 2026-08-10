@@ -6,6 +6,7 @@ import { ArrowRight, Upload, CheckCircle2, Cog } from 'lucide-react';
 import SectionLabel from '../components/ui/SectionLabel';
 import { PRODUCT_OPTIONS } from '../data/products';
 import { SITE_CONFIG } from '../data/config';
+import { useSEO } from '../hooks/useSEO';
 
 const schema = z.object({
   practitionerName: z.string().min(2, 'Name is required'),
@@ -24,6 +25,11 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 export default function QuotePage() {
+  useSEO({
+    title: 'Request a Quote',
+    description: 'Submit your digital dental case details for a comprehensive technical assessment and precise manufacturing quotation from Dental Forge.',
+  });
+
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [dragOver, setDragOver] = useState(false);

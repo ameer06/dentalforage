@@ -6,6 +6,7 @@ import { useState } from 'react';
 import SectionLabel from '../components/ui/SectionLabel';
 import { SITE_CONFIG, WHATSAPP_URL } from '../data/config';
 import { CheckCircle2 } from 'lucide-react';
+import { useSEO } from '../hooks/useSEO';
 
 const schema = z.object({
   name: z.string().min(2, 'Name is required'),
@@ -18,6 +19,11 @@ const schema = z.object({
 type ContactForm = z.infer<typeof schema>;
 
 export default function ContactPage() {
+  useSEO({
+    title: 'Contact Us',
+    description: 'Get in touch with Dental Forge Technologies. Contact our specialized team to streamline your digital workflow and discuss precision manufacturing requirements.',
+  });
+
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 

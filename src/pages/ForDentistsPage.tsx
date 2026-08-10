@@ -3,6 +3,7 @@ import { UploadCloud, Cpu, Clock, MessageCircle, Check } from 'lucide-react';
 import CTASection from '../components/sections/CTASection';
 import SectionLabel from '../components/ui/SectionLabel';
 import { WHATSAPP_URL } from '../data/config';
+import { useSEO } from '../hooks/useSEO';
 
 const PROCESS_CARDS = [
   {
@@ -47,6 +48,11 @@ const BENEFITS = [
 ];
 
 export default function ForDentistsPage() {
+  useSEO({
+    title: 'For Dentists & Clinics',
+    description: 'Learn how Dental Forge integrates seamlessly with your clinic workflow. Send intraoral scans, track cases, and receive precision dental restorations.',
+  });
+
   return (
     <>
       {/* ── Hero ──────────────────────────────────────────────────── */}

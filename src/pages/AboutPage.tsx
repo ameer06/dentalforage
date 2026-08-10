@@ -1,8 +1,14 @@
 import { Cpu, BarChart3, Shield, Users } from 'lucide-react';
 import CTASection from '../components/sections/CTASection';
 import SectionLabel from '../components/ui/SectionLabel';
+import { useSEO } from '../hooks/useSEO';
 
 export default function AboutPage() {
+  useSEO({
+    title: 'About Us | Digital Architecture',
+    description: 'Learn about Dental Forge Technologies, our state-of-the-art digital manufacturing facility, and our commitment to uncompromising precision in dental restorations.',
+  });
+
   return (
     <>
       {/* ── Hero ──────────────────────────────────────────────────── */}

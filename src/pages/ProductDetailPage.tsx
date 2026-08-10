@@ -5,10 +5,20 @@ import SectionLabel from '../components/ui/SectionLabel';
 import { PRODUCTS } from '../data/products';
 import { WHATSAPP_URL } from '../data/config';
 import { MessageCircle } from 'lucide-react';
+import { useSEO } from '../hooks/useSEO';
 
 export default function ProductDetailPage() {
   const { slug } = useParams<{ slug: string }>();
   const product = PRODUCTS.find((p) => p.slug === slug);
+
+  // Default SEO fallback if product is loading or not found
+  const seoTitle = product ? product.title : 'Product Details';
+  const seoDesc = product ? product.description : 'Product details and specifications';
+
+  useSEO({
+    title: seoTitle,
+    description: seoDesc,
+  });
 
   if (!product) {
     return <Navigate to="/products" replace />;

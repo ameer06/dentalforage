@@ -5,6 +5,7 @@ import {
 import FeatureCard from '../components/ui/FeatureCard';
 import CTASection from '../components/sections/CTASection';
 import SectionLabel from '../components/ui/SectionLabel';
+import { useSEO } from '../hooks/useSEO';
 
 const FEATURES = [
   {
@@ -66,6 +67,11 @@ const TRADITIONAL = [
 ];
 
 export default function WhyUsPage() {
+  useSEO({
+    title: 'Why Choose Dental Forge',
+    description: 'Discover why top dental clinics across India partner with Dental Forge Technologies for their CAD/CAM dental restorations and digital workflows.',
+  });
+
   return (
     <>
       {/* ── Hero ──────────────────────────────────────────────────── */}

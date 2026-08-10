@@ -3,8 +3,14 @@ import ProductCard from '../components/ui/ProductCard';
 import CTASection from '../components/sections/CTASection';
 import SectionLabel from '../components/ui/SectionLabel';
 import { PRODUCTS, PRODUCT_CATEGORIES } from '../data/products';
+import { useSEO } from '../hooks/useSEO';
 
 export default function ProductsPage() {
+  useSEO({
+    title: 'Products & Services',
+    description: 'Explore our comprehensive range of digital dental laboratory services including Zirconia crowns, implants, clear aligners, and precision removables.',
+  });
+
   const [activeCategory, setActiveCategory] = useState<string>('All');
   const categories = ['All', ...PRODUCT_CATEGORIES];
 
