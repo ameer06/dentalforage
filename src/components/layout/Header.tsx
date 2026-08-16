@@ -7,7 +7,7 @@ import MobileMenu from './MobileMenu';
 const navItems = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/about' },
-  { label: 'Products', href: '/products' },
+  { label: 'Services', href: '/products' },
   { label: 'Why Us', href: '/why-us' },
   { label: 'For Dentists', href: '/for-dentists' },
   { label: 'Contact', href: '/contact' },
@@ -72,10 +72,10 @@ export default function Header() {
           {/* CTA + Mobile toggle */}
           <div className="flex items-center gap-stack-sm">
             <Link
-              to="/quote"
+              to="/submit-case"
               className="hidden md:inline-flex btn-primary text-label-md px-6 py-2"
             >
-              Request a Quote
+              Submit a Case
             </Link>
 
             <button

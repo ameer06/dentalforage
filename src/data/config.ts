@@ -7,16 +7,20 @@ export const SITE_CONFIG = {
   description:
     'A digital-first CAD/CAM dental laboratory providing precision milled restorations, clear aligners, and digital workflows for dentists, clinics, and hospitals across India.',
 
-  // Contact — update with real details
-  phone: '+91 00000 00000',
-  whatsapp: '+919000000000', // no spaces/dashes, used in wa.me link
-  whatsappDisplay: '+91 90000 00000',
-  email: 'cases@dentalforgetech.com',
+  // Contact
+  phone: '8724907297',
+  phoneDisplay: '+91 87249 07297',
+  whatsapp: '918724907297', // no spaces/dashes, used in wa.me link
+  whatsappDisplay: '+91 87249 07297',
+  email: 'info@dentalforgetech.com',
   address: {
-    line1: '[Address Line 1]',
-    line2: '[City, State — PIN]',
-    full: '[Address Line 1], [City], [State] — [PIN]',
+    line1: '38 B, Elango Plaza, Radhapuram Road',
+    line2: 'Vallioor, 627117',
+    full: '38 B, Elango Plaza, Radhapuram Road, Vallioor, 627117',
   },
+
+  // Google Maps — insert official URL when available
+  googleMapsUrl: '',
 
   // Business hours (IST)
   hours: [

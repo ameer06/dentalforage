@@ -9,6 +9,7 @@ import ForDentistsPage from './pages/ForDentistsPage';
 import QuotePage from './pages/QuotePage';
 import ContactPage from './pages/ContactPage';
 import PrivacyPage from './pages/PrivacyPage';
+import SubmitCasePage from './pages/SubmitCasePage';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       { path: 'why-us', element: <WhyUsPage /> },
       { path: 'for-dentists', element: <ForDentistsPage /> },
       { path: 'quote', element: <QuotePage /> },
+      { path: 'submit-case', element: <SubmitCasePage /> },
       { path: 'contact', element: <ContactPage /> },
       { path: 'privacy', element: <PrivacyPage /> },
     ],

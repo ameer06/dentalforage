@@ -6,6 +6,7 @@ import FeatureCard from '../components/ui/FeatureCard';
 import CTASection from '../components/sections/CTASection';
 import SectionLabel from '../components/ui/SectionLabel';
 import { useSEO } from '../hooks/useSEO';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const FEATURES = [
   {
@@ -72,8 +73,10 @@ export default function WhyUsPage() {
     description: 'Discover why top dental clinics across India partner with Dental Forge Technologies for their CAD/CAM dental restorations and digital workflows.',
   });
 
+  const scrollRef = useScrollReveal();
+
   return (
-    <>
+    <div ref={scrollRef}>
       {/* ── Hero ──────────────────────────────────────────────────── */}
       <section className="relative border-b border-stroke-subtle py-16 md:py-24 overflow-hidden" aria-label="Why Dental Forge hero">
         <div className="absolute inset-0 grid-bg opacity-20 pointer-events-none" />
@@ -183,7 +186,10 @@ export default function WhyUsPage() {
         </div>
       </section>
 
-      <CTASection />
-    </>
+      <CTASection
+        primaryLabel="Submit a Case"
+        primaryTo="/submit-case"
+      />
+    </div>
   );
 }

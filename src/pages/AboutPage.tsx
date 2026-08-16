@@ -2,6 +2,7 @@ import { Cpu, BarChart3, Shield, Users } from 'lucide-react';
 import CTASection from '../components/sections/CTASection';
 import SectionLabel from '../components/ui/SectionLabel';
 import { useSEO } from '../hooks/useSEO';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 export default function AboutPage() {
   useSEO({
@@ -9,8 +10,10 @@ export default function AboutPage() {
     description: 'Learn about Dental Forge Technologies, our state-of-the-art digital manufacturing facility, and our commitment to uncompromising precision in dental restorations.',
   });
 
+  const scrollRef = useScrollReveal();
+
   return (
-    <>
+    <div ref={scrollRef}>
       {/* ── Hero ──────────────────────────────────────────────────── */}
       <section className="relative py-20 md:py-32 border-b border-stroke-subtle overflow-hidden" aria-label="About hero">
         {/* Tech grid bg */}
@@ -155,7 +158,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <CTASection />
-    </>
+      <CTASection
+        primaryLabel="Submit a Case"
+        primaryTo="/submit-case"
+      />
+    </div>
   );
 }

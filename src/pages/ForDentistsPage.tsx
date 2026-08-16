@@ -4,6 +4,7 @@ import CTASection from '../components/sections/CTASection';
 import SectionLabel from '../components/ui/SectionLabel';
 import { WHATSAPP_URL } from '../data/config';
 import { useSEO } from '../hooks/useSEO';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const PROCESS_CARDS = [
   {
@@ -53,8 +54,10 @@ export default function ForDentistsPage() {
     description: 'Learn how Dental Forge integrates seamlessly with your clinic workflow. Send intraoral scans, track cases, and receive precision dental restorations.',
   });
 
+  const scrollRef = useScrollReveal();
+
   return (
-    <>
+    <div ref={scrollRef}>
       {/* ── Hero ──────────────────────────────────────────────────── */}
       <section className="relative border-b border-stroke-subtle py-16 md:py-[120px] overflow-hidden" aria-label="For dentists hero">
         <div
@@ -193,7 +196,10 @@ export default function ForDentistsPage() {
         </div>
       </section>
 
-      <CTASection />
-    </>
+      <CTASection
+        primaryLabel="Submit a Case"
+        primaryTo="/submit-case"
+      />
+    </div>
   );
 }

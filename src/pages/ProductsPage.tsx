@@ -4,6 +4,7 @@ import CTASection from '../components/sections/CTASection';
 import SectionLabel from '../components/ui/SectionLabel';
 import { PRODUCTS, PRODUCT_CATEGORIES } from '../data/products';
 import { useSEO } from '../hooks/useSEO';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 export default function ProductsPage() {
   useSEO({
@@ -19,8 +20,10 @@ export default function ProductsPage() {
       ? PRODUCTS
       : PRODUCTS.filter((p) => p.category === activeCategory);
 
+  const scrollRef = useScrollReveal();
+
   return (
-    <>
+    <div ref={scrollRef}>
       {/* ── Hero ──────────────────────────────────────────────────── */}
       <section className="relative border-b border-stroke-subtle py-16 md:py-24 overflow-hidden" aria-label="Products hero">
         <div className="absolute inset-0 grid-bg opacity-20 pointer-events-none" />
@@ -73,7 +76,10 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      <CTASection />
-    </>
+      <CTASection
+        primaryLabel="Submit a Case"
+        primaryTo="/submit-case"
+      />
+    </div>
   );
 }

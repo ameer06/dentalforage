@@ -99,11 +99,11 @@ export default function MobileMenu({ id, isOpen, onClose, navItems, isActive }: 
         {/* Footer CTAs */}
         <div className="px-6 pb-8 flex flex-col gap-3 flex-shrink-0 border-t border-stroke-subtle pt-stack-md">
           <Link
-            to="/quote"
+            to="/submit-case"
             onClick={onClose}
             className="btn-primary w-full justify-center py-3 text-label-md"
           >
-            Request a Quote
+            Submit a Case
           </Link>
           <a
             href={WHATSAPP_URL}

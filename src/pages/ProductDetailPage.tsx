@@ -6,14 +6,15 @@ import { PRODUCTS } from '../data/products';
 import { WHATSAPP_URL } from '../data/config';
 import { MessageCircle } from 'lucide-react';
 import { useSEO } from '../hooks/useSEO';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 export default function ProductDetailPage() {
   const { slug } = useParams<{ slug: string }>();
   const product = PRODUCTS.find((p) => p.slug === slug);
 
   // Default SEO fallback if product is loading or not found
-  const seoTitle = product ? product.title : 'Product Details';
-  const seoDesc = product ? product.description : 'Product details and specifications';
+  const seoTitle = product ? product.name : 'Product Details';
+  const seoDesc = product ? product.shortDescription : 'Product details and specifications';
 
   useSEO({
     title: seoTitle,
@@ -29,8 +30,10 @@ export default function ProductDetailPage() {
     (p) => p.category === product.category && p.slug !== product.slug
   ).slice(0, 3);
 
+  const scrollRef = useScrollReveal();
+
   return (
-    <>
+    <div ref={scrollRef}>
       {/* ── Hero ──────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden border-b border-stroke-subtle" aria-label={`${product.name} detail`}>
         {/* Grid BG */}
@@ -197,7 +200,10 @@ export default function ProductDetailPage() {
         </section>
       )}
 
-      <CTASection />
-    </>
+      <CTASection
+        primaryLabel="Submit a Case"
+        primaryTo="/submit-case"
+      />
+    </div>
   );
 }

@@ -7,6 +7,7 @@ import SectionLabel from '../components/ui/SectionLabel';
 import { SITE_CONFIG, WHATSAPP_URL } from '../data/config';
 import { CheckCircle2 } from 'lucide-react';
 import { useSEO } from '../hooks/useSEO';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const schema = z.object({
   name: z.string().min(2, 'Name is required'),
@@ -23,6 +24,8 @@ export default function ContactPage() {
     title: 'Contact Us',
     description: 'Get in touch with Dental Forge Technologies. Contact our specialized team to streamline your digital workflow and discuss precision manufacturing requirements.',
   });
+
+  const scrollRef = useScrollReveal();
 
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -41,7 +44,7 @@ export default function ContactPage() {
   };
 
   return (
-    <>
+    <div ref={scrollRef}>
       {/* ── Hero ──────────────────────────────────────────────────── */}
       <section className="px-4 md:px-margin-desktop py-stack-lg max-w-container-max mx-auto" aria-label="Contact hero">
         <SectionLabel className="mb-3">Get In Touch</SectionLabel>
@@ -134,6 +137,29 @@ export default function ContactPage() {
                 {SITE_CONFIG.address.line2}
               </p>
             </div>
+
+            {/* Location Map Placeholder */}
+            {SITE_CONFIG.googleMapsUrl ? (
+              <div className="mt-stack-lg rounded-xl overflow-hidden border border-stroke-subtle h-[200px]">
+                <iframe
+                  src={SITE_CONFIG.googleMapsUrl}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Dental Forge Location"
+                />
+              </div>
+            ) : (
+              <div className="mt-stack-lg rounded-xl border border-stroke-subtle bg-surface flex items-center justify-center p-8 text-center text-on-surface-variant min-h-[160px]">
+                <p className="text-sm">
+                  Google Maps Location<br/>
+                  <span className="text-text-muted">(Update googleMapsUrl in config.ts)</span>
+                </p>
+              </div>
+            )}
           </div>
 
           {/* WhatsApp CTA */}
@@ -257,6 +283,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
