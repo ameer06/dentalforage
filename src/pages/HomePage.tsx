@@ -165,8 +165,7 @@ export default function HomePage() {
               <span>Or WhatsApp us directly</span>
             </a>
           </div>
-          {/* Right: hero image slider */}
-          <div className="md:col-span-6 mt-stack-lg md:mt-0 relative aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden border border-stroke-subtle reveal-right group">
+          <div className="md:col-span-6 mt-stack-lg md:mt-0 relative aspect-[4/3] md:aspect-[16/9] rounded-3xl overflow-hidden border border-stroke-subtle reveal-right group bg-surface-bright">
             {HERO_SLIDES.map((slide, index) => (
               <div
                 key={slide.src}
@@ -177,7 +176,7 @@ export default function HomePage() {
                 <img
                   src={slide.src}
                   alt={slide.alt}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain p-2"
                   loading={index === 0 ? "eager" : "lazy"}
                 />
                 {/* CAD overlay badge */}
