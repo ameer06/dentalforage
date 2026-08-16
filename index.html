@@ -87,5 +87,25 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- Hidden Netlify Forms for React app -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="subject" />
+      <textarea name="message"></textarea>
+    </form>
+
+    <form name="submit-case" data-netlify="true" netlify-honeypot="bot-field" hidden enctype="multipart/form-data">
+      <input type="text" name="dentistName" />
+      <input type="text" name="clinic" />
+      <input type="tel" name="phone" />
+      <input type="email" name="email" />
+      <input type="text" name="caseType" />
+      <input type="text" name="caseReference" />
+      <textarea name="prescription"></textarea>
+      <textarea name="instructions"></textarea>
+      <input type="file" name="files" multiple />
+    </form>
   </body>
 </html>

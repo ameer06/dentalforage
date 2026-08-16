@@ -59,11 +59,31 @@ export default function SubmitCasePage() {
 
   const onSubmit = async (data: CaseFormData) => {
     setSubmitting(true);
-    // TODO: Replace with real API endpoint when backend is ready
-    await new Promise((r) => setTimeout(r, 1500));
-    console.info('Case submission:', { ...data, files: files.map(f => f.name) });
-    setSubmitting(false);
-    setSubmitted(true);
+    try {
+      const formData = new FormData();
+      formData.append('form-name', 'submit-case');
+      Object.entries(data).forEach(([key, value]) => {
+        if (value) formData.append(key, value);
+      });
+      
+      // Append all uploaded files
+      files.forEach((file) => {
+        formData.append('files', file);
+      });
+
+      await fetch('/', {
+        method: 'POST',
+        body: formData,
+      });
+
+      console.info('Case submitted via Netlify Forms');
+      setSubmitted(true);
+    } catch (error) {
+      console.error('Case submission error:', error);
+      alert('There was an issue submitting your case. Please try again or contact us directly.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const handleFiles = (fileList: FileList | null) => {

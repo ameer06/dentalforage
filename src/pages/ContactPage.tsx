@@ -36,11 +36,28 @@ export default function ContactPage() {
 
   const onSubmit = async (data: ContactForm) => {
     setSubmitting(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    console.info('Contact form submitted:', data);
-    setSubmitting(false);
-    setSubmitted(true);
-    reset();
+    try {
+      const formData = new URLSearchParams();
+      formData.append('form-name', 'contact');
+      Object.entries(data).forEach(([key, value]) => {
+        if (value) formData.append(key, value);
+      });
+
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formData.toString(),
+      });
+      
+      console.info('Contact form submitted via Netlify Forms');
+      setSubmitted(true);
+      reset();
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('There was an issue submitting your message. Please try again or contact us on WhatsApp.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
