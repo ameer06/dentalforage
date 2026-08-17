@@ -165,7 +165,7 @@ export default function HomePage() {
               <span>Or WhatsApp us directly</span>
             </a>
           </div>
-          <div className="md:col-span-6 mt-stack-lg md:mt-0 relative aspect-[1.25/1] sm:aspect-[4/3] md:aspect-[16/9] rounded-3xl overflow-hidden border border-stroke-subtle reveal-right group shadow-sm">
+          <div className="md:col-span-6 mt-stack-lg md:mt-0 relative aspect-[4/3] rounded-3xl overflow-hidden border border-stroke-subtle reveal-right group shadow-sm">
             {HERO_SLIDES.map((slide, index) => (
               <div
                 key={slide.src}
