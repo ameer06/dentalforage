@@ -46,7 +46,7 @@ export default function Header() {
           <Link
             to="/"
             className="font-sans font-bold text-[20px] leading-tight tracking-tight text-primary flex-shrink-0"
-            aria-label="Dental Forge Technologies — Home"
+            aria-label="Dental Forge Technologies LLP — Home"
           >
             {SITE_CONFIG.companyName}
           </Link>

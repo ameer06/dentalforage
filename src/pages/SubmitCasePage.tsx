@@ -39,7 +39,7 @@ type CaseFormData = z.infer<typeof schema>;
 export default function SubmitCasePage() {
   useSEO({
     title: 'Submit a Case',
-    description: 'Submit your dental case digitally to Dental Forge Technologies. Upload STL, PLY, OBJ, or other digital files and receive precision CAD/CAM restorations.',
+    description: 'Submit your dental case digitally to Dental Forge Technologies LLP. Upload STL, PLY, OBJ, or other digital files and receive precision CAD/CAM restorations.',
   });
 
   const scrollRef = useScrollReveal();

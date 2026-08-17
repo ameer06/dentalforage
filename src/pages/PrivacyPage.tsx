@@ -10,7 +10,7 @@ export default function PrivacyPage() {
   const sections = [
     {
       title: 'Information We Collect',
-      content: `When you use the Dental Forge Technologies website or submit a case inquiry, we may collect:
+      content: `When you use the Dental Forge Technologies LLP website or submit a case inquiry, we may collect:
       
 • Contact information (name, email address, phone number)
 • Clinic or practice name and location

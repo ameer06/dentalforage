@@ -7,7 +7,7 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 export default function AboutPage() {
   useSEO({
     title: 'About Us | Digital Architecture',
-    description: 'Learn about Dental Forge Technologies, our state-of-the-art digital manufacturing facility, and our commitment to uncompromising precision in dental restorations.',
+    description: 'Learn about Dental Forge Technologies LLP, our state-of-the-art digital manufacturing facility, and our commitment to uncompromising precision in dental restorations.',
   });
 
   const scrollRef = useScrollReveal();
@@ -40,7 +40,7 @@ export default function AboutPage() {
           <div className="relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden border border-stroke-subtle bg-surface-container-low">
             <img
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuBllEzmEBOHBOYLf1C8KQ7NaWLMQ6sPlyiL8qg3z2G4CNPsTWlCiDBS2nz4m1-q6ZsIQ5F_VMX_B1kCV7MphHZBSDdPUj6r6iIJNScSpmiwxnAi7AAw0hK7SHb4nUMXpyN2yoxtobBXVo8JxokSkxJLO0WbQk4wXOYCelUeQO2AyoZPLlJrPR0gEdzQbrwnMCnC05huJV6omXXLzCjy51gCPWKPg2zMu3jtk67FHAJdciXJZT_A3ek3EA"
-              alt="Precision-milled zirconia dental restoration — Dental Forge Technologies manufacturing"
+              alt="Precision-milled zirconia dental restoration — Dental Forge Technologies LLP manufacturing"
               loading="lazy"
               className="w-full h-full object-cover"
             />

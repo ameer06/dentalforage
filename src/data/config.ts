@@ -1,7 +1,7 @@
 // Central configuration — edit these values to update across the site
 
 export const SITE_CONFIG = {
-  companyName: 'Dental Forge Technologies',
+  companyName: 'Dental Forge Technologies LLP',
   companyFullName: 'Dental Forge Technologies LLP',
   tagline: 'Precision Digital Dental Laboratory',
   description:

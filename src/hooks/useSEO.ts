@@ -8,7 +8,7 @@ interface SEOProps {
 export function useSEO({ title, description }: SEOProps) {
   useEffect(() => {
     // Update the document title
-    const fullTitle = `${title} | Dental Forge Technologies`;
+    const fullTitle = `${title} | Dental Forge Technologies LLP`;
     document.title = fullTitle;
 
     // Update the meta description

@@ -22,7 +22,7 @@ type ContactForm = z.infer<typeof schema>;
 export default function ContactPage() {
   useSEO({
     title: 'Contact Us',
-    description: 'Get in touch with Dental Forge Technologies. Contact our specialized team to streamline your digital workflow and discuss precision manufacturing requirements.',
+    description: 'Get in touch with Dental Forge Technologies LLP. Contact our specialized team to streamline your digital workflow and discuss precision manufacturing requirements.',
   });
 
   const scrollRef = useScrollReveal();

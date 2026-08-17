@@ -70,7 +70,7 @@ const TRADITIONAL = [
 export default function WhyUsPage() {
   useSEO({
     title: 'Why Choose Dental Forge',
-    description: 'Discover why top dental clinics across India partner with Dental Forge Technologies for their CAD/CAM dental restorations and digital workflows.',
+    description: 'Discover why top dental clinics across India partner with Dental Forge Technologies LLP for their CAD/CAM dental restorations and digital workflows.',
   });
 
   const scrollRef = useScrollReveal();
@@ -83,7 +83,7 @@ export default function WhyUsPage() {
         <div className="section-container relative z-10 max-w-3xl">
           <SectionLabel className="mb-3">Why Choose Us</SectionLabel>
           <h1 className="text-display-lg-mobile md:text-display-lg font-bold text-primary mb-stack-md tracking-tight">
-            Why Dental Forge Technologies
+            Why Dental Forge Technologies LLP
           </h1>
           <p className="text-body-lg text-on-surface-variant max-w-2xl">
             We are not a generic dental lab. We are a purpose-built digital manufacturing partner
@@ -126,7 +126,7 @@ export default function WhyUsPage() {
             {/* Dental Forge column */}
             <div className="card p-8">
               <div className="font-mono text-label-caps tracking-[0.08em] uppercase text-secondary mb-6 pb-4 border-b border-stroke-subtle">
-                Dental Forge Technologies
+                Dental Forge Technologies LLP
               </div>
               <ul className="space-y-4">
                 {US.map((item) => (
