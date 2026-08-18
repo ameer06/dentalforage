@@ -20,7 +20,7 @@ export const SITE_CONFIG = {
   },
 
   // Google Maps
-  googleMapsUrl: 'https://maps.google.com/maps?q=Dental+Forge+Technologies+LLP,+38+B,+Elango+Plaza,+Radhapuram+Road,+Vallioor,+627117&t=&z=15&ie=UTF8&iwloc=&output=embed',
+  googleMapsUrl: 'https://maps.google.com/maps?q=8.3813642,77.6197016&t=&z=16&ie=UTF8&iwloc=&output=embed',
 
   // Business hours (IST)
   hours: [
