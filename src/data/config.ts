@@ -20,7 +20,7 @@ export const SITE_CONFIG = {
   },
 
   // Google Maps
-  googleMapsUrl: 'https://maps.google.com/maps?q=Sri+Chandhanam+Dental+clinic+vallioor+Implant+and+Braces+Center+Branch+_2,+Elango+Plaza,+38+A,+Radhapuram+Rd,+near+Selvam+orthopedic+hospital,+Valliyur,+Vadakkuvalliyur,+Tamil+Nadu+627117&t=&z=16&ie=UTF8&iwloc=&output=embed',
+  googleMapsUrl: 'https://maps.google.com/maps?q=8.381416,77.619717+(Dental+Forge+Technologies+LLP)&t=&z=17&ie=UTF8&iwloc=&output=embed',
 
   // Business hours (IST)
   hours: [
