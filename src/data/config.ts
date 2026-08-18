@@ -19,8 +19,8 @@ export const SITE_CONFIG = {
     full: '38 B, Elango Plaza, Radhapuram Road, Vallioor, 627117',
   },
 
-  // Google Maps — insert official URL when available
-  googleMapsUrl: '',
+  // Google Maps
+  googleMapsUrl: 'https://maps.google.com/maps?q=38+B,+Elango+Plaza,+Radhapuram+Road,+Vallioor,+627117&t=&z=15&ie=UTF8&iwloc=&output=embed',
 
   // Business hours (IST)
   hours: [
