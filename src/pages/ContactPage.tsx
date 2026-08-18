@@ -157,18 +157,22 @@ export default function ContactPage() {
 
             {/* Location Map Placeholder */}
             {SITE_CONFIG.googleMapsUrl ? (
-              <div className="mt-stack-lg rounded-xl overflow-hidden border border-stroke-subtle h-[200px]">
-                <iframe
-                  src={SITE_CONFIG.googleMapsUrl}
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Dental Forge Location"
+              <a 
+                href="https://maps.app.goo.gl/71jR4YPKYDJeJGjJ8" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block mt-stack-lg rounded-xl overflow-hidden border border-stroke-subtle relative group"
+              >
+                <img 
+                  src="/images/map-location.jpg" 
+                  alt="Dental Forge Location Map" 
+                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-              </div>
+                <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-300" />
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-surface px-4 py-2 rounded-full shadow-md text-sm font-medium text-primary flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
+                  <MapPin size={16} /> Get Directions
+                </div>
+              </a>
             ) : (
               <div className="mt-stack-lg rounded-xl border border-stroke-subtle bg-surface flex items-center justify-center p-8 text-center text-on-surface-variant min-h-[160px]">
                 <p className="text-sm">
